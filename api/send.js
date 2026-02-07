@@ -1,3 +1,7 @@
+export const config = {
+  runtime: "nodejs"
+};
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Only POST allowed" });
@@ -5,8 +9,8 @@ export default async function handler(req, res) {
 
   const { username, service, videoLink } = req.body;
 
-  const token = "7244277654:AAF3Fxa26pLKeQMV4I0x9PkD7xnHY594YJQ";
-  const chatId = "6626415274";
+  const token = process.env.BOT_TOKEN;
+  const chatId = process.env.CHAT_ID;
 
   const message = `
 📌 New TikTok Boost Request
@@ -28,9 +32,9 @@ export default async function handler(req, res) {
       })
     });
 
-    res.status(200).json({ success: true });
+    return res.status(200).json({ success: true });
 
   } catch (error) {
-    res.status(500).json({ error: "Failed to send message" });
+    return res.status(500).json({ error: "Failed to send message" });
   }
 }
