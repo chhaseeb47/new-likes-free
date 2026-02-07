@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TikTok Boost</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="top-card">
+    <a href="https://whatsapp.com/channel/0029VaxTIEH1CYoSV4sZmq37" target="_blank">
+      Join WhatsApp Channel
+    </a>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h1>TikTok Boost</h1>
+      <p>Get Free Likes, Views & Followers</p>
+    </div>
+
+    <div class="card-body">
+      <input type="text" id="box1" placeholder="Enter your TikTok Username">
+
+      <select id="service">
+        <option value="">Choose Service</option>
+        <option value="200 Likes">200 Likes</option>
+        <option value="100 Followers">100 Followers</option>
+        <option value="1000 Views">1000 Views</option>
+      </select>
+
+      <button onclick="openPopup()">Submit Request</button>
+    </div>
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="popup-box">
+      <h2>Paste Video Link</h2>
+      <input type="text" id="videoLink" placeholder="Enter TikTok Video Link">
+
+      <button onclick="sendOrder()">Submit Order</button>
+      <button class="close-btn" onclick="closePopup()">Cancel</button>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
